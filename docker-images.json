@@ -1,0 +1,31 @@
+{
+  "description": "Preset for use with all of Renovate's renovate/* docker images",
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":masterIssue",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)"
+  ],
+  "automergeType": "branch",
+  "prCreation": "not-pending",
+  "docker": {
+    "pinDigests": true
+  },
+  "packageRules": [
+    {
+      "description": "Automerge any renovate/ image dependencies",
+      "datasources": ["docker"],
+      "packagePatterns": ["^renovate/"],
+      "updateTypes": ["pin", "digest", "patch", "minor"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge ubuntu digest updates (usually security patches)",
+      "datasources": ["docker"],
+      "packageNames": ["ubuntu"],
+      "updateTypes": ["pin", "digest"],
+      "automerge": true
+    }
+  ]
+}
