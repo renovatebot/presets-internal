@@ -23,7 +23,7 @@
     {
       "description": "Automerge ubuntu digest updates (usually security patches)",
       "datasources": ["docker"],
-      "packageNames": ["ubuntu"],
+      "packageNames": ["amd64/ubuntu", "ubuntu"],
       "updateTypes": ["pin", "digest"],
       "automerge": true
     }
