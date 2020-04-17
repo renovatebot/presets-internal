@@ -5,7 +5,8 @@
     ":rebaseStalePrs",
     ":masterIssue",
     ":semanticCommits",
-    ":semanticCommitScope(deps)"
+    ":semanticCommitScope(deps)",
+    "docker:enableMajor"
   ],
   "automergeType": "branch",
   "prCreation": "not-pending",
@@ -14,11 +15,16 @@
   },
   "packageRules": [
     {
+      "updateTypes": ["major", "minor"],
+      "extends": [":masterIssueApproval"]
+    },
+    {
       "description": "Automerge any renovate/ image dependencies",
       "datasources": ["docker"],
       "packagePatterns": ["^renovate/"],
       "updateTypes": ["pin", "digest", "patch", "minor"],
-      "automerge": true
+      "automerge": true,
+      "masterIssueApproval": false
     },
     {
       "description": "Automerge ubuntu digest updates (usually security patches)",
