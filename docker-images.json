@@ -32,6 +32,12 @@
       "packageNames": ["amd64/ubuntu", "ubuntu"],
       "updateTypes": ["pin", "digest"],
       "automerge": true
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["pin", "digest", "patch", "minor"],
+      "automerge": true,
+      "masterIssueApproval": false
     }
   ],
   "regexManagers": [
