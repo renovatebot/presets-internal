@@ -36,25 +36,18 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["(^|/|\\.)Dockerfile$', '(^|/)Dockerfile\\.[^/]*$"],
+      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)(?: versioning=(?<versioning>.+?))?\\s(?:ENV|ARG) .+?_VERSION=(?<currentValue>+*)\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     },
     {
-      "fileMatch": ["(^|/|\\.)Dockerfile$', '(^|/)Dockerfile\\.[^/]*$"],
+      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>.+?)(?: versioning=(?<versioning>.+?))?\\sRUN install-[a-z]+? [a-z-]+? (?<currentValue>+*)\\s"
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: lookupName=(?<lookupName>.+?))?(?: versioning=(?<versioning>.+?))?\\sRUN install-[a-z]+? (?<depName>[a-z-]+?) (?<currentValue>.*)\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
-    },
-    {
-      "fileMatch": ["(^|/|\\.)Dockerfile$', '(^|/)Dockerfile\\.[^/]*$"],
-      "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: versioning=(?<versioning>[a-z-]+?))?\\sRUN install-.+? (?<depName>[a-z-]+?) (?<currentValue>+*)\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
-    }
+    }   
   ]
 }
