@@ -38,6 +38,14 @@
       "updateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
       "masterIssueApproval": false
+    },
+    {
+      "description": "Automerge renovate minor and patch updates",
+      "packageNames": ["renovate"],
+      "updateTypes": ["minor", "patch"],
+      "automerge": true,
+      "masterIssueApproval": false,
+      "separateMinorPatch": false
     }
   ],
   "regexManagers": [
