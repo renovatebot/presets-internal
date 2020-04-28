@@ -46,6 +46,11 @@
       "automerge": true,
       "masterIssueApproval": false,
       "separateMinorPatch": false
+    },
+    {
+      "packageNames": ["prettier"],
+      "packagePatterns": ["^@prettier\\/", "^prettier-plugin-"],
+      "groupName": "prettier packages"
     }
   ],
   "regexManagers": [
