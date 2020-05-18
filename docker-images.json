@@ -8,6 +8,7 @@
     ":semanticCommitScope(deps)",
     "docker:enableMajor"
   ],
+  "assignees": ["viceice"],
   "automergeType": "branch",
   "prCreation": "not-pending",
   "docker": {
@@ -15,8 +16,13 @@
   },
   "packageRules": [
     {
-      "updateTypes": ["major", "minor"],
+      "updateTypes": ["major"],
       "extends": [":masterIssueApproval"]
+    },
+    {
+      "description": "Automerge patch updates",
+      "updateTypes": ["patch"],
+      "automerge": true
     },
     {
       "description": "Enable docker major updates",
