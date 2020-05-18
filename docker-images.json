@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Preset for use with all of Renovate's renovate/* docker images",
   "extends": [
     "config:base",
