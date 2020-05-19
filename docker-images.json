@@ -15,6 +15,7 @@
   "docker": {
     "pinDigests": true
   },
+  "separateMinorPatch": true,
   "packageRules": [
     {
       "updateTypes": ["major"],
