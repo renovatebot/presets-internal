@@ -48,6 +48,13 @@
       "automerge": true
     },
     {
+      "description": "Disable ubuntu minor updates",
+      "datasources": ["docker"],
+      "packageNames": ["amd64/ubuntu", "ubuntu"],
+      "updateTypes": ["minor"],
+      "enabled": false
+    },
+    {
       "depTypeList": ["devDependencies"],
       "updateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
