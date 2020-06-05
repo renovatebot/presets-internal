@@ -15,15 +15,14 @@
   "docker": {
     "pinDigests": true
   },
-  "separateMinorPatch": true,
   "packageRules": [
     {
       "updateTypes": ["major"],
       "extends": [":masterIssueApproval"]
     },
     {
-      "description": "Automerge patch updates",
-      "updateTypes": ["patch"],
+      "description": "Automerge non-major updates",
+      "updateTypes": ["minor", "patch"],
       "automerge": true
     },
     {
