@@ -22,7 +22,7 @@
     },
     {
       "description": "Automerge non-major updates",
-      "updateTypes": ["minor", "patch"],
+      "updateTypes": ["minor", "patch", "digest"],
       "automerge": true
     },
     {
