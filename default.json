@@ -1,0 +1,8 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Preset for use with Renovate's repos",
+  "extends": [
+    "github>renovatebot/presets-internal:docker-images",
+    "github>renovatebot/presets-internal:node"
+  ]
+}
