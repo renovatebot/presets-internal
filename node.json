@@ -7,6 +7,7 @@
     "stabilityDays": 0,
     "masterIssueApproval": true
   },
+  "postUpdateOptions": ["yarnDedupeHighest"],
   "packageRules": [
     {
       "depTypeList": ["dependencies"],
