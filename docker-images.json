@@ -32,14 +32,6 @@
       "enabled": true
     },
     {
-      "description": "Automerge any renovate/ image dependencies",
-      "datasources": ["docker"],
-      "packagePatterns": ["^renovate/"],
-      "updateTypes": ["pin", "digest", "patch", "minor"],
-      "automerge": true,
-      "masterIssueApproval": false
-    },
-    {
       "description": "Automerge ubuntu digest updates (usually security patches)",
       "datasources": ["docker"],
       "packageNames": ["amd64/ubuntu", "ubuntu"],
@@ -60,11 +52,17 @@
       "masterIssueApproval": false
     },
     {
-      "description": "Automerge renovate minor and patch updates",
+      "description": "Auto aprove any renovate dependencies",
       "packageNames": ["renovate"],
-      "updateTypes": ["minor", "patch"],
+      "packagePatterns": ["^renovate/"],
+      "masterIssueApproval": false
+    },
+    {
+      "description": "Automerge renovate minor and lower updates",
+      "packageNames": ["renovate"],
+      "packagePatterns": ["^renovate/"],
+      "updateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
-      "masterIssueApproval": false,
       "separateMinorPatch": false
     },
     {
