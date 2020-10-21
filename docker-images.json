@@ -102,12 +102,6 @@
       ],
       "depName": "{{#if depName}}{{depName}}{{else}}{{image}}{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
-    },
-    {
-      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
-      "matchStrings": ["uses: (?<depName>[a-z-/]+?)@(?<currentValue>.+?)\\s"],
-      "datasourceTemplate": "github-tags",
-      "versioningTemplate": "docker"
     }
   ]
 }
