@@ -69,6 +69,10 @@
       "packageNames": ["prettier"],
       "packagePatterns": ["^@prettier\\/", "^prettier-plugin-"],
       "groupName": "prettier packages"
+    },
+    {
+      "packageNames": ["renovatebot/internal-tools"],
+      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
     }
   ],
   "regexManagers": [
