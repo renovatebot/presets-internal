@@ -53,6 +53,10 @@
       "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
     },
     {
+      "depTypeList": ["action"],
+      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
+    },
+    {
       "packageNames": ["prettier"],
       "packagePatterns": ["^@prettier\\/", "^prettier-plugin-"],
       "groupName": "prettier packages"
