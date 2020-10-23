@@ -1,12 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Preset for use with Renovate's repos using node",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["at any time"],
-    "stabilityDays": 0,
-    "masterIssueApproval": true
-  },
+  "extends": ["github>renovatebot/presets-internal:base"],
   "postUpdateOptions": ["yarnDedupeHighest"],
   "packageRules": [
     {

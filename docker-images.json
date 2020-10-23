@@ -1,30 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Preset for use with all of Renovate's renovate/* docker images",
-  "extends": [
-    "config:base",
-    ":rebaseStalePrs",
-    ":masterIssue",
-    ":semanticCommits",
-    ":semanticCommitScope(deps)",
-    "docker:enableMajor"
-  ],
-  "assignees": ["viceice"],
-  "automergeType": "branch",
-  "prCreation": "not-pending",
-  "docker": {
-    "pinDigests": true
-  },
+  "extends": ["github>renovatebot/presets-internal:base"],
   "packageRules": [
-    {
-      "updateTypes": ["major"],
-      "extends": [":masterIssueApproval"]
-    },
-    {
-      "description": "Automerge non-major updates",
-      "updateTypes": ["minor", "patch", "digest"],
-      "automerge": true
-    },
     {
       "description": "Enable docker major updates",
       "datasources": ["docker"],
@@ -72,7 +50,8 @@
     },
     {
       "packageNames": ["renovatebot/internal-tools"],
-      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
+      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+      "masterIssueApproval": false
     }
   ],
   "regexManagers": [
