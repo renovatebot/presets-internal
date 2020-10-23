@@ -25,6 +25,31 @@
       "description": "Automerge non-major updates",
       "updateTypes": ["minor", "patch", "digest"],
       "automerge": true
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["pin", "digest", "patch", "minor"],
+      "automerge": true,
+      "masterIssueApproval": false
+    },
+    {
+      "description": "Auto aprove any renovate dependencies",
+      "packageNames": ["renovate"],
+      "packagePatterns": ["^renovate/"],
+      "masterIssueApproval": false
+    },
+    {
+      "description": "Automerge renovate minor and lower updates",
+      "packageNames": ["renovate"],
+      "packagePatterns": ["^renovate/"],
+      "updateTypes": ["pin", "digest", "patch", "minor"],
+      "automerge": true,
+      "separateMinorPatch": false
+    },
+    {
+      "packageNames": ["renovatebot/internal-tools"],
+      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+      "masterIssueApproval": false
     }
   ]
 }
