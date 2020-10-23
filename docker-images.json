@@ -4,12 +4,6 @@
   "extends": ["github>renovatebot/presets-internal:base"],
   "packageRules": [
     {
-      "description": "Enable docker major updates",
-      "datasources": ["docker"],
-      "updateTypes": ["major"],
-      "enabled": true
-    },
-    {
       "description": "Automerge ubuntu digest updates (usually security patches)",
       "datasources": ["docker"],
       "packageNames": ["amd64/ubuntu", "ubuntu"],

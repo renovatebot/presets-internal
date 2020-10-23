@@ -1,17 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Preset for use with Renovate's repos using node",
-  "extends": ["github>renovatebot/presets-internal:base"],
-  "postUpdateOptions": ["yarnDedupeHighest"],
-  "packageRules": [
-    {
-      "depTypeList": ["dependencies"],
-      "extends": [":automergePatch"]
-    },
-    {
-      "packageNames": ["prettier"],
-      "packagePatterns": ["^@prettier\\/", "^prettier-plugin-"],
-      "groupName": "prettier packages"
-    }
-  ]
+  "extends": ["github>renovatebot/presets-internal:base", "group:linters"],
+  "postUpdateOptions": ["yarnDedupeHighest"]
 }

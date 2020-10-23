@@ -8,7 +8,8 @@
     ":semanticCommits",
     ":semanticCommitScope(deps)",
     "docker:enableMajor",
-    ":maintainLockFilesWeekly"
+    ":maintainLockFilesWeekly",
+    "group:linters"
   ],
   "assignees": ["viceice"],
   "automergeType": "branch",
@@ -35,7 +36,8 @@
     {
       "description": "Auto aprove any renovate dependencies",
       "packageNames": ["renovate"],
-      "packagePatterns": ["^renovate/"],
+      "packagePatterns": ["^renovate/", "^renovatebot/"],
+      "stabilityDays": 0,
       "masterIssueApproval": false
     },
     {
@@ -48,8 +50,12 @@
     },
     {
       "packageNames": ["renovatebot/internal-tools"],
-      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
-      "masterIssueApproval": false
+      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
+    },
+    {
+      "packageNames": ["prettier"],
+      "packagePatterns": ["^@prettier\\/", "^prettier-plugin-"],
+      "groupName": "prettier packages"
     }
   ]
 }
