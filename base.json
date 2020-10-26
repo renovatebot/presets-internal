@@ -24,6 +24,7 @@
     },
     {
       "description": "Automerge non-major updates",
+      "excludePackageNames": ["renovate"],
       "updateTypes": ["minor", "patch", "digest"],
       "automerge": true
     },
