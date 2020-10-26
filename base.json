@@ -42,7 +42,6 @@
     },
     {
       "description": "Automerge renovate minor and lower updates",
-      "packageNames": ["renovate"],
       "packagePatterns": ["^renovate/"],
       "updateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
