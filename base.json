@@ -12,7 +12,6 @@
     "group:linters"
   ],
   "assignees": ["viceice"],
-  "automergeType": "branch",
   "prCreation": "not-pending",
   "docker": {
     "pinDigests": true
