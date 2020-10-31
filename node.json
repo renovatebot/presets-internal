@@ -12,6 +12,10 @@
       "datasources": ["npm"],
       "updateTypes": ["patch", "minor", "major"],
       "prBodyColumns": ["Package", "Update", "Type", "Change", "Age", "Adoption", "Tests"]
+    },
+      "datasources": ["npm"],
+      "packageNames": ["aws-sdk"],
+      "dependencyDashboardApproval": true
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"]
