@@ -11,7 +11,7 @@
     ":maintainLockFilesWeekly",
     "group:linters"
   ],
-  "assignees": ["viceice"],
+  "assignees": ["rarkins", "viceice"],
   "prCreation": "not-pending",
   "docker": {
     "pinDigests": true
