@@ -3,8 +3,8 @@
   "description": "Base preset for use with Renovate's repos",
   "extends": [
     "config:base",
+    ":dependencyDashboard",
     ":rebaseStalePrs",
-    ":masterIssue",
     ":semanticCommits",
     ":semanticCommitScope(deps)",
     "docker:enableMajor",
@@ -19,7 +19,7 @@
   "packageRules": [
     {
       "updateTypes": ["major"],
-      "extends": [":masterIssueApproval"]
+      "depdendencyDashboardApproval": true
     },
     {
       "description": "Automerge non-major updates",
@@ -31,14 +31,14 @@
       "depTypeList": ["devDependencies"],
       "updateTypes": ["pin", "digest", "patch", "minor"],
       "automerge": true,
-      "masterIssueApproval": false
+      "dependencyDashboardApproval": false
     },
     {
       "description": "Auto aprove any renovate dependencies",
       "packageNames": ["renovate"],
       "packagePatterns": ["^renovate/", "^renovatebot/"],
       "stabilityDays": 0,
-      "masterIssueApproval": false
+      "dependencyDashboardApproval": false
     },
     {
       "description": "Automerge renovate minor and lower updates",
