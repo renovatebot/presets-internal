@@ -15,6 +15,10 @@
     },
     {
       "datasources": ["npm"],
+      "stabilityDays": 7
+    },
+    {
+      "datasources": ["npm"],
       "packageNames": ["aws-sdk"],
       "dependencyDashboardApproval": true
     }
