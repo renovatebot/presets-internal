@@ -9,6 +9,7 @@
     ":semanticCommitScope(deps)",
     "docker:enableMajor",
     ":maintainLockFilesWeekly",
+    ":masterIssue",
     "group:linters"
   ],
   "assignees": ["rarkins", "viceice"],
