@@ -20,7 +20,7 @@
   "packageRules": [
     {
       "updateTypes": ["major"],
-      "depdendencyDashboardApproval": true
+      "dependencyDashboardApproval": true
     },
     {
       "description": "Automerge non-major updates",
