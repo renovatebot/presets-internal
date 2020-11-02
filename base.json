@@ -13,8 +13,8 @@
   ],
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true,
-    "automergeType": "branch"
+    "automergeType": "branch",
+    "dependencyDashboardApproval": false
   },
   "assignees": ["rarkins", "viceice"],
   "prCreation": "not-pending",
@@ -29,7 +29,7 @@
     {
       "description": "Automerge non-major updates",
       "excludePackageNames": ["renovate"],
-      "updateTypes": ["minor", "patch", "digest"],
+      "updateTypes": ["minor", "patch", "digest", "lockFileMaintenance"],
       "automerge": true
     },
     {
