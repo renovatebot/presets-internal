@@ -8,10 +8,14 @@
     ":semanticCommits",
     ":semanticCommitScope(deps)",
     "docker:enableMajor",
-    ":maintainLockFilesWeekly",
     ":masterIssue",
     "group:linters"
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "automergeType": "branch"
+  },
   "assignees": ["rarkins", "viceice"],
   "prCreation": "not-pending",
   "docker": {
