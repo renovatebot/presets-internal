@@ -5,13 +5,14 @@
   "prBodyDefinitions": {
     "Adoption": "![adoption](https://badges-beta.renovateapi.com/packages/adoption-slim/npm/{{replace '/' '%2f' depName}}/{{{toVersion}}})",
     "Age": "![age](https://badges-beta.renovateapi.com/packages/age-slim/npm/{{replace '/' '%2f' depName}}/{{{toVersion}}})",
+    "Confidence": "![confidence](https://badges-beta.renovateapi.com/packages/confidence-slim/npm/{{replace '/' '%2f' depName}}/{{{fromVersion}}}/{{{toVersion}}})",
     "Tests": "![compatibility](https://badges-beta.renovateapi.com/packages/compatibility-slim/npm/{{replace '/' '%2f' depName}}/{{{fromVersion}}}/{{{toVersion}}})"
   },
   "packageRules": [
     {
       "datasources": ["npm"],
       "updateTypes": ["patch", "minor", "major"],
-      "prBodyColumns": ["Package", "Update", "Type", "Change", "Age", "Adoption", "Tests"]
+      "prBodyColumns": ["Package", "Update", "Type", "Change", "Age", "Adoption", "Tests", "Confidence"]
     },
     {
       "datasources": ["npm"],
