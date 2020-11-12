@@ -1,19 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Preset for use with Renovate's repos using node",
-  "extends": ["github>renovatebot/presets-internal:base", "group:linters"],
-  "prBodyDefinitions": {
-    "Adoption": "![adoption](https://badges-beta.renovateapi.com/packages/adoption-slim/npm/{{replace '/' '%2f' depName}}/{{{toVersion}}})",
-    "Age": "![age](https://badges-beta.renovateapi.com/packages/age-slim/npm/{{replace '/' '%2f' depName}}/{{{toVersion}}})",
-    "Confidence": "![confidence](https://badges-beta.renovateapi.com/packages/confidence-slim/npm/{{replace '/' '%2f' depName}}/{{{fromVersion}}}/{{{toVersion}}})",
-    "Tests": "![compatibility](https://badges-beta.renovateapi.com/packages/compatibility-slim/npm/{{replace '/' '%2f' depName}}/{{{fromVersion}}}/{{{toVersion}}})"
-  },
+  "extends": [
+    "github>renovatebot/presets-internal:base",
+    "github>whitesource/merge-confidence:beta",
+    "group:linters"
+  ],
   "packageRules": [
-    {
-      "datasources": ["npm"],
-      "updateTypes": ["patch", "minor", "major"],
-      "prBodyColumns": ["Package", "Update", "Type", "Change", "Age", "Adoption", "Tests", "Confidence"]
-    },
     {
       "datasources": ["npm"],
       "stabilityDays": 7
