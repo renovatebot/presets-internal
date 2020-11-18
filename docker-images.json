@@ -45,7 +45,7 @@
       "matchStrings": [
         "\"image\"=\"(?<image>[a-z-]+?)\"\\s,\\s\"datasource\"=\"(?<datasource>[a-z-]+?)\"(?:\\s,\\s\"depName\"=\"(?<depName>[a-z-]+?)\")?(?:\\s,\\s\"versioning\"=\"(?<versioning>[a-z-]+?)\")?(?:\\s,\\s\"latestVersion\"=\"(?<latestVersion>.+?)\")?"
       ],
-      "depName": "{{#if depName}}{{depName}}{{else}}{{image}}{{/if}}",
+      "depNameTemplate": "{{#if depName}}{{depName}}{{else}}{{image}}{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     }
   ]
