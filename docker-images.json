@@ -22,7 +22,8 @@
       "datasources": ["docker"],
       "updateTypes": ["digest"],
       "packageNames": ["ubuntu", "renovate/ubuntu", "renovate/buildpack"],
-      "branchTopic": "{{{depNameSanitized}}}-digests"
+      "branchTopic": "{{{depNameSanitized}}}-digests",
+      "commitMessageTopic": "{{{depName}}} Docker digests"
     }
   ],
   "regexManagers": [
