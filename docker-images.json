@@ -16,6 +16,13 @@
       "packageNames": ["amd64/ubuntu", "ubuntu"],
       "updateTypes": ["minor"],
       "enabled": false
+    },
+    {
+      "description": "Group digest updates",
+      "datasources": ["docker"],
+      "updateTypes": ["digest"],
+      "packageNames": ["ubuntu", "renovate/ubuntu", "renovate/buildpack"],
+      "branchTopic": "{{{depNameSanitized}}}-digests"
     }
   ],
   "regexManagers": [
