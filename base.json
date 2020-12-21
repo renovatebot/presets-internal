@@ -61,6 +61,13 @@
       "packageNames": ["prettier"],
       "packagePatterns": ["^@prettier\\/", "^prettier-plugin-"],
       "groupName": "prettier packages"
+    },
+    {
+      "packageNames": ["renovate/renovate"],
+      "paths": [".md"],
+      "extends": ["schedule:weekly"],
+      "automerge": true,
+      "stabilityDays": 0
     }
   ],
   "regexManagers": [
