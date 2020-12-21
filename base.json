@@ -62,5 +62,15 @@
       "packagePatterns": ["^@prettier\\/", "^prettier-plugin-"],
       "groupName": "prettier packages"
     }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["\\.md$"],
+      "matchStrings": [
+        "(?<depName>renovate\\/renovate):(?<currentValue>[a-z0-9.-]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?"
+      ],
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
+    }
   ]
 }
