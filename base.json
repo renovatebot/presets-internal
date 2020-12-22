@@ -70,8 +70,8 @@
       "automerge": true,
       "stabilityDays": 0,
       "commitMessagePrefix": "docs:",
-      "commitMessageAction": "update",
-      "commitMessageTopic": "references to {{{depName}}}"
+      "commitMessageTopic": "references to {{{depName}}}",
+      "additionalBranchPrefix": "docs-"
     }
   ],
   "regexManagers": [
