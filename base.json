@@ -63,11 +63,16 @@
       "groupName": "prettier packages"
     },
     {
+      "description": "Update references to Docker tags for renovate/renovate in Markdown files",
       "packageNames": ["renovate/renovate"],
       "paths": [".md"],
       "extends": ["schedule:weekly"],
       "automerge": true,
-      "stabilityDays": 0
+      "stabilityDays": 0,
+      "commitMessageTopic": "references to {{{depName}}}",
+      "semanticCommitType": "docs",
+      "semanticCommitScope": null,
+      "additionalBranchPrefix": "docs-"
     }
   ],
   "regexManagers": [
