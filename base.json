@@ -66,10 +66,9 @@
       "description": "Update references to Docker tags for renovate/renovate in Markdown files",
       "packageNames": ["renovate/renovate"],
       "paths": [".md"],
-      "extends": ["schedule:weekly"],
+      "extends": ["schedule:weekly", ":semanticCommitScope(docs)"],
       "automerge": true,
       "stabilityDays": 0,
-      "commitMessagePrefix": "docs:",
       "commitMessageTopic": "references to {{{depName}}}",
       "additionalBranchPrefix": "docs-"
     }
