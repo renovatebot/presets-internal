@@ -63,6 +63,7 @@
       "groupName": "prettier packages"
     },
     {
+      "description": "Update references to Docker tags for renovate/renovate in Markdown files",
       "packageNames": ["renovate/renovate"],
       "paths": [".md"],
       "extends": ["schedule:weekly"],
