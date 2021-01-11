@@ -55,6 +55,12 @@
       ],
       "depNameTemplate": "{{#if depName}}{{depName}}{{else}}{{image}}{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
+    },
+    {
+      "fileMatch": ["\\.github\\/workflows\\.*\\.yaml$"],
+      "matchStrings": [
+        "^\\s+version: (?<currentValue>.*) #renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)(?: versioning=(?<versioning>.*?))?\\s"
+      ]
     }
   ]
 }
