@@ -28,6 +28,7 @@
   ],
   "regexManagers": [
     {
+      "description": "Update _VERSION ENV and ARG variables in Dockerfiles",
       "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s(?:ENV|ARG) .+?_VERSION=(?<currentValue>.+?)\\s"
@@ -35,6 +36,7 @@
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     },
     {
+      "description": "Update install-* commands using Renovate's buildpack",
       "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-]+?)(?: lookupName=(?<lookupName>.+?))?(?: versioning=(?<versioning>[a-z-]+?))?\\sRUN install-[a-z]+? (?<depName>[a-z-]+?) (?<currentValue>.+?)\\s"
@@ -42,6 +44,7 @@
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     },
     {
+      "description": "Update _VERSION variables in shell scripts",
       "fileMatch": ["\\.sh$"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s[A-Z_]+?_VERSION=(?<currentValue>.+?)\\s"
@@ -49,6 +52,7 @@
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     },
     {
+      "description": "Update image dependencies in Renovate buildpack build.json files",
       "fileMatch": ["^builder.json$"],
       "matchStrings": [
         "\"image\"=\"(?<image>[a-z-]+?)\"\\s,\\s\"datasource\"=\"(?<datasource>[a-z-]+?)\"(?:\\s,\\s\"depName\"=\"(?<depName>[a-z-]+?)\")?(?:\\s,\\s\"versioning\"=\"(?<versioning>[a-z-]+?)\")?(?:\\s,\\s\"latestVersion\"=\"(?<latestVersion>.+?)\")?"
@@ -57,6 +61,7 @@
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     },
     {
+      "description": "Update annotated version variables in GitHub workflows",
       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.ya?ml$"],
       "matchStrings": [
         "^\\s+version: (?<currentValue>.*) #renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)(?: versioning=(?<versioning>.*?))?\\s"
