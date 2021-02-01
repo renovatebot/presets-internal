@@ -8,7 +8,7 @@ env:
   RENOVATE_VBERSION: 24.32.0 #renovate: datasource=npm depName=renovate
 
 jobs:
-  test:
+  presets:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -16,9 +16,7 @@ jobs:
       matrix:
         file:
           - default
-          - base
           - docker-images
-          - enable
           - node
     env:
       RENOVATE_CONFIG_FILE: ${{ matrix.file }}.json
