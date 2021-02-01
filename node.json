@@ -1,22 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Preset for use with Renovate's repos using node",
+  "description": "Deprecated! Use github>renovatebot/.github",
   "extends": [
-    "github>renovatebot/presets-internal:base",
-    "github>whitesource/merge-confidence:beta",
-    "group:linters"
-  ],
-  "packageRules": [
-    {
-      "datasources": ["npm"],
-      "excludePackageNames": ["renovate"],
-      "stabilityDays": 7
-    },
-    {
-      "datasources": ["npm"],
-      "packageNames": ["aws-sdk"],
-      "dependencyDashboardApproval": true
-    }
-  ],
-  "postUpdateOptions": ["yarnDedupeHighest"]
+    "github>renovatebot/.github"
+  ]
 }
