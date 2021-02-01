@@ -18,6 +18,7 @@
   },
   "assignees": ["rarkins", "viceice"],
   "prCreation": "not-pending",
+  "automergeType": "branch",
   "docker": {
     "pinDigests": true
   },
